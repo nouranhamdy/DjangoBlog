@@ -9,7 +9,7 @@
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Sign up</h2>
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form"> {% csrf_token %}
                         <div class="form-group">
                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             {{ form.username }}
@@ -24,14 +24,16 @@
                         </div>
                         <div class="form-group">
                             <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                            {{ form.password }}
+                            {{ form.password2 }}
                         </div>
                         <div class="form-group">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-</svg>
-                            {{ form.telephone }}>
+                            <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                            {{ form.telephone }}
                         </div>
+                        <p style="color:red;" id="messages">{{ form.non_field_errors }}</p>
+<!--                        {% for msg in messages %}-->
+<!--                        <p id="messages">{{ msg }}</p>-->
+<!--                        {% endfor %}-->
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                         </div>
@@ -39,7 +41,7 @@
                 </div>
                 <div class="signup-image">
                     <figure><img src="{% static 'images/signup-image.jpg' %}" alt="sing up image"></figure>
-                    <a href="#" class="signup-image-link">I am already member</a>
+                    <a href="{% url 'login' %}" class="signup-image-link">I am already member</a>
                 </div>
             </div>
         </div>

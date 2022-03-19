@@ -1,22 +1,28 @@
 from django.shortcuts import render, redirect, HttpResponse
 from .models import *
 from .forms import *
+from .serializer import UserSerializer
 #auth imports.
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+#REST_api imports#
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
 # Create your views here.
-
+@login_required(login_url='login')
 def home(request):
-    return HttpResponse('hello')
+    users = User.objects.all()
+    return HttpResponse(users)
 
 
 def register(request):
-    # if request.user.is_authenticated:
-    #     return redirect('home')
-    # else:
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
         form = RegisterForm()
         if request.method == 'POST':
             form = RegisterForm(request.POST)
@@ -46,3 +52,15 @@ def loginPg(request):
             else:
                 messages.info(request, 'username or password is incorrect')
         return render(request, 'Blog/login.html')
+
+
+def signoutPg(request):
+    logout(request)
+    return redirect('login')
+
+
+@api_view(['GET'])
+def apiAllUsers(request):
+    users = User.objects.all()
+    st_ser = UserSerializer(users, many=True)
+    return Response(st_ser.data)

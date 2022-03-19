@@ -1,4 +1,7 @@
 from django.db import models
+# requires "pip install django-phonenumber-field[phonenumberslite]"
+# requires "pip install Babel"
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 # Create your models here.
@@ -6,7 +9,7 @@ class User(models.Model):
     username = models.CharField(max_length=50, null=False)
     email = models.CharField(max_length=30, null=False)
     password = models.CharField(max_length=20, null=False)
-    telephone = models.CharField(max_length=11)
+    telephone = PhoneNumberField()
     is_admin = models.BooleanField()
     is_blocked = models.BooleanField()
 
@@ -22,8 +25,8 @@ class Post(models.Model):
     content = models.CharField(max_length=1000)
     dateOfPublish = models.DateTimeField(auto_now_add=True)
     tag = models.CharField(max_length=50)
-    likes = models.IntegerField()
-    dislikes = models.IntegerField()
+    likes = models.IntegerField(default=0)
+    dislikes = models.IntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
