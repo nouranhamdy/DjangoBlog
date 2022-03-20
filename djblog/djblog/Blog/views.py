@@ -14,7 +14,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .forms import PostForm, EditForm
 from django.urls import reverse_lazy
 
-
+from .models import Post
 # Create your views here.
 # @login_required(login_url='login')
 # def home(request):
@@ -67,13 +67,19 @@ def apiAllUsers(request):
     users = User.objects.all()
     st_ser = UserSerializer(users, many=True)
     return Response(st_ser.data)
-
-class HomeView(ListView):
-    model = Post
-    template_name = 'Blog/home.html'
-    ordering = ['-post_date']
+#
+# class HomeView(ListView):
+#     model = Post
+#     template_name = 'Blog/home.html'
+#     ordering = ['-post_date']
     #ordering = ['-id']
-
+def PostView(request):
+    context ={
+        'title':'Home Page',
+        'post': Post.objects.all()
+    }
+    # template_name = 'Blog/home.html'
+    return render(request,'Blog/home.html',context)
 
 def CategoryView(request, cats):
     category_posts = Post.objects.filter(category=cats.replace('-',' '))

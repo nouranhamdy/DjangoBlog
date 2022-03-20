@@ -1,10 +1,11 @@
-from django.urls import path
-from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView
+#from django.urls import path
+from django.urls import path, re_path, include
+from .views import PostView ,  ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView
 from . import views
 
 urlpatterns = [
     #path('home/', HomeView.as_view(), name='home'),
-    path('',HomeView.as_view(), name="home"),
+    path('home/',views.PostView, name="home"),
     path('register/', views.register, name='register'),
     path('login/', views.loginPg, name='login'),
     path('logout/', views.signoutPg , name='logout'),
@@ -14,6 +15,6 @@ urlpatterns = [
     path('add_category/', AddCategoryView.as_view(), name="add_category"),
     path('article/edit/<int:pk>',UpdatePostView.as_view(), name="update_post"),
     path('article/<int:pk>/remove', DeletePostView.as_view(), name="delete_post"),
-    path('category/<str:cats>/',CategoryView, name="category"),
+    path('category/<str:cats>/',CategoryView, name="category")
 ]
 
