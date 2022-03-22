@@ -13,7 +13,7 @@ from rest_framework.response import Response
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .forms import PostForm, EditForm
 from django.urls import reverse_lazy
-
+from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from .models import Post
 # Create your views here.
 # @login_required(login_url='login')
@@ -74,9 +74,19 @@ def apiAllUsers(request):
 #     ordering = ['-post_date']
     #ordering = ['-id']
 def PostView(request):
+    posts=Post.objects.all()
+    paginator=Paginator(posts,5)
+    page=request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_page)
+
     context ={
-        'title':'Home Page',
-        'post': Post.objects.all()
+        'posts': posts,
+        'page':page,
     }
     # template_name = 'Blog/home.html'
     return render(request,'Blog/home.html',context)

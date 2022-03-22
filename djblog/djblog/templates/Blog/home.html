@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Posts</h1>
 <ul>
-{% for post in object_list %}
+{% for post in posts %}
 <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a>
     - <a href="{% url 'category' post.category|slugify %}">{{post.category}}</a>
     - {{post.author.first_name}}
@@ -16,5 +16,6 @@
     </small><br/>
     {{post.body | slice:":200" | safe}}</li>
 {% endfor %}
+{% include 'Blog/pagination.html' with page=posts %}
 </ul>
   {% endblock %}
