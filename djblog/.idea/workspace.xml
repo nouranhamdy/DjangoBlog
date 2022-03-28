@@ -2,154 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ac8c583-dc11-421d-8254-c91599e33292" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Blog/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/migrations/0002_alter_comment_user_alter_post_author_delete_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blog/migrations/0003_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-02_13-30-34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-04_02-18-06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-12_12-58-54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-12_16-18-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-22_16-35-51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-23_10-58-46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshot_from_2022-03-02_03-36-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Blog/pagination.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/migrations/0002_post_dislikes_post_likes_alter_user_telephone.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/migrations/0003_rename_categoryname_category_name_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/css/coda-slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/css/coda-slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/css/material-design-iconic-font.css" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/css/material-design-iconic-font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/css/material-design-iconic-font.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/css/material-design-iconic-font.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/material-icon/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-300italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-300italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-500italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-500italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-600.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-600.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-600.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-600.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-600.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-600.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-600.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-600.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-600.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-600.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-700italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-700italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-800italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-800italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-900.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/poppins-v5-latin-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/poppins-v5-latin-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-700italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-italic.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/fonts/poppins/roboto-condensed-v16-latin-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/images/572.png" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/images/572.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/images/signin-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/images/signin-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/images/signup-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/images/signup-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/common/extend.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/common/extend.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/common/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/common/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/common/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/common/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/common/minxi.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/common/minxi.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/common/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/common/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/layouts/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/layouts/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/layouts/responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/layouts/responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/vendor/jquery/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/vendor/jquery/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/static/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/static/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Blogdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blogdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/Screenshot_from_2022-02-26_15-29-29.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenshot_from_2022-02-26_15-29-29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/djblog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/djblog/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/djblog/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/djblog/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/djblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djblog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/djblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djblog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/djblog/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/djblog/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/add_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/add_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/add_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/add_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/article_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/article_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/delete_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/delete_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/Blog/update_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/update_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/admin/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djblog/templates/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djblog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Blog/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/djproj/djproj" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">

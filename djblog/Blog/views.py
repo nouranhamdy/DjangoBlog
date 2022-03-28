@@ -13,6 +13,9 @@ from rest_framework.response import Response
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .forms import PostForm, EditForm
 from django.urls import reverse_lazy
+#pagination imports
+from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
+from .models import Post
 
 
 # Create your views here.
@@ -69,15 +72,33 @@ def apiAllUsers(request):
     return Response(st_ser.data)
 
 
-class HomeView(ListView):
-    model = Post
-    template_name = 'Blog/home.html'
-    ordering = ['-post_date']
+#
+# class HomeView(ListView):
+#     model = Post
+#     template_name = 'Blog/home.html'
+#     ordering = ['-post_date']
     #ordering = ['-id']
+def PostView(request):
+    posts=Post.objects.all()
+    paginator=Paginator(posts,5)
+    page=request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_page)
+
+    context = {
+        'posts': posts,
+        'page':page,
+    }
+    # template_name = 'Blog/home.html'
+    return render(request, 'Blog/home.html', context)
 
 
 def CategoryView(request, cats):
-    category_posts = Post.objects.filter(category=cats.replace('-',' '))
+    category_posts = Post.objects.filter(category=cats.replace('-', ' '))
     return  render(request,'Blog/categories.html', {'cats': cats.title().replace('-', ' '), 'category_posts': category_posts})
 
 

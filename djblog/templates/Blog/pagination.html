@@ -1,0 +1,13 @@
+<div class="border-top- pt-3 mt-4 text-center">
+    {% if page.has_previous %}
+     <a class="btn btn-secondary bg-secondary" href="?page={{page.previous_page_number}}">Prev</a>
+    {% else %}
+    <a class="btn btn-secondary bg-secondary disabled" href="#">Prev</a>
+    {% endif %}
+    <span class="pr-4 pl-4">page {{ page.number }} of {{page.paginator.num_pages}} </span>
+    {% if page.has_next %}
+      <a class="btn btn-secondary bg-secondary" href="?page={{page.next_page_number}}">Next</a>
+     {% else %}
+    <a class="btn btn-secondary bg-secondary disabled" href="#">Next</a>
+    {% endif %}
+</div>
