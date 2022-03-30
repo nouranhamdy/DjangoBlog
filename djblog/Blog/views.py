@@ -25,10 +25,15 @@ from .models import Post
 #     return HttpResponse(users)
 
 
+def home(request):
+    posts=Post.objects.all()
+    context = {'object_list':posts}
+    return render(request,'Blog/home.html',context)
+    
 def register(request):
-    # if request.user.is_authenticated:
-    #     return redirect('login')
-    # else:
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
         form = RegisterForm()
         if request.method == 'POST':
             form = RegisterForm(request.POST)

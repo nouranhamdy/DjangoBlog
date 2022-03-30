@@ -1,7 +1,7 @@
 from django.db import models
 # requires "pip install django-phonenumber-field[phonenumberslite]"
 # requires "pip install Babel"
-from phonenumber_field.modelfields import PhoneNumberField
+# from phonenumber_field.modelfields import PhoneNumberField
 from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class user(User):
-    telephone = PhoneNumberField()
+    pass
+    # telephone = PhoneNumberField()
 
 
 class Category(models.Model):
