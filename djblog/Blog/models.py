@@ -31,9 +31,11 @@ class Post(models.Model):
     body = models.CharField(max_length=1000)
     post_date = models.DateTimeField(auto_now_add=True)
     title_tag = models.CharField(max_length=255, default='')
-    likes = models.IntegerField(default=0)
+    # likes = models.IntegerField(default=0)
+    likes = models.ManyToManyField (user, related_name='blog_posts')
     dislikes = models.IntegerField(default=0)
-    author = models.CharField(max_length=255, default='')
+    # author = models.CharField(max_length=255, default='')
+    author = models.ForeignKey(user, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):

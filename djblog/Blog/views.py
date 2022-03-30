@@ -79,10 +79,11 @@ def apiAllUsers(request):
 
 def PostView(request):
     posts=Post.objects.all()
-    paginator=Paginator(posts,5)
-    page=request.GET.get('page')
+    paginator=Paginator(posts,5) #  value is each 5 posts
+    page=request.GET.get('page') # key is page
+    cat_menu=Category.objects.all() # get all cats we have for the drop down menu
     try:
-        posts = paginator.page(page)
+        posts = paginator.page(page) # paginate with this key
     except PageNotAnInteger:
         posts = paginator.page(1)
     except EmptyPage:
@@ -91,6 +92,7 @@ def PostView(request):
     context = {
         'posts': posts,
         'page':page,
+        'cat_menu' : cat_menu,
     }
     # template_name = 'Blog/home.html'
     return render(request, 'Blog/home.html', context)
