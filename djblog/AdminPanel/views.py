@@ -27,7 +27,7 @@ def addPost(request):
         post_form = PostForm(request.POST)
         if post_form.is_valid():
             post_form.save()
-            return redirect('admin_posts')
+            return redirect('Admin_posts')
     post_form = PostForm()
     context = {'form': post_form}
     return render(request, 'admin/add_post.html', context)

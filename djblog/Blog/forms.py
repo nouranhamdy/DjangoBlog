@@ -99,11 +99,12 @@ class PostForm(forms.ModelForm):
         fields = ('title', 'title_tag', 'author','category', 'body')
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
-            'author': forms.Select(attrs={'class': 'form-control'}),
-            # 'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control'}),
+            'title' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Write your title here!'}),
+            'title_tag' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tag'}),
+            'author' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': ' Author '}),
+            #'author' : forms.Select(attrs={'class': 'form-control'}),
+            'category' : forms.Select(choices=choice_list, attrs={'class': 'form-control' ,'placeholder': ' Category'}),
+            'body' : forms.Textarea(attrs={'class': 'form-control'}),
         }
 
 
