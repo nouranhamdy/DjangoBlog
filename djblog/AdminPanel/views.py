@@ -26,7 +26,7 @@ def adminPosts(request):
 
 def addPost(request):
     if request.method == 'POST':
-        post_form = PostForm(request.POST)
+        post_form = PostForm(request.POST,request.FILES)
         if post_form.is_valid():
             post_form.save()
             return redirect('Admin_posts')
