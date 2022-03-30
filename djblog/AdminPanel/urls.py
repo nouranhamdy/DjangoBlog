@@ -11,6 +11,7 @@ urlpatterns = [
     path('post-add',Adminviews.addPost, name="post-add"),
     path('post-edit/<post_id>',Adminviews.editPost, name="post-edit"),
     path('post-del/<post_id>',Adminviews.postDel, name="post-delete"),
+    path('articleAdmin/<int:pk>', Adminviews.ArticleDetailView.as_view(), name="admin-article-detail"),
 
     path('admin_users',Adminviews.adminUsers , name='admin_users'),
     path('user-block/<user_id>',Adminviews.userBlock , name='user-block'),

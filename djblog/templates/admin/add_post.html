@@ -1,4 +1,4 @@
-{% extends 'Blog/base.html' %}
+{% extends 'admin/base.html' %}
 
 {% block head_title %}
 
@@ -8,13 +8,12 @@ Add Post
 
 {% block content %}
 
-
     <h1>Create Post </h1>
-    <div class="form-group">
+    <div >
     <form method= "POST" enctype="multipart/form-data"> {% csrf_token %}
     {{ form.as_p }}
     {{ form.media}}
-    <button type="submit" class="btn btn-secondary"><i class="fas fa-plus"></i> Add New Post</button>
+    <button type="submit" class="btn btn-secondary"> Add New Post</button>
     </form>
     </div>
     

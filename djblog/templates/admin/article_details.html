@@ -1,8 +1,8 @@
 {% extends 'Blog/base.html' %}
 {% block title %}{{post.title_tag}}{%  endblock %}
 {% block content %}
-<h1>{{post.title}} bloooog </h1>
-By: {{post.author.first_name}}
+<h1>{{post.title}}</h1>
+By: {{post.author}}
 {{post.author.last_name}} -
 {{post.post_date}}
 
@@ -11,6 +11,6 @@ By: {{post.author.first_name}}
 {{post.body |safe}}
 
 <br/><br/>
-<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+<a href="{% url 'Admin_posts' %}" class="btn btn-secondary">Back</a>
   {% endblock %}
 

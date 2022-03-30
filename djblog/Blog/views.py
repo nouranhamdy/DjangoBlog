@@ -11,7 +11,7 @@ from django.contrib import messages
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .forms import PostForm, EditForm
+from .forms import PostForm
 from django.urls import reverse_lazy
 #pagination imports
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
@@ -77,12 +77,6 @@ def apiAllUsers(request):
     return Response(st_ser.data)
 
 
-#
-# class HomeView(ListView):
-#     model = Post
-#     template_name = 'Blog/home.html'
-#     ordering = ['-post_date']
-    #ordering = ['-id']
 def PostView(request):
     posts=Post.objects.all()
     paginator=Paginator(posts,5)
@@ -111,30 +105,3 @@ class ArticleDetailView(DetailView):
     model = Post
     template_name = 'Blog/article_details.html'
 
-
-class AddPostView(CreateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'Blog/add_post.html'
-    #fields = '__all__'
-    #fields = ('title','body')
-
-class AddCategoryView(CreateView):
-    model = Category
-    #form_class = PostForm
-    template_name = 'Blog/add_category.html'
-    fields = '__all__'
-    #fields = ('title','body')
-
-
-class UpdatePostView(UpdateView):
-    model = Post
-    form_class = EditForm
-    template_name = 'Blog/update_post.html'
-    #fields = ['title', 'title_tag', 'body']
-
-
-class DeletePostView(DeleteView):
-    model = Post
-    template_name = 'Blog/delete_post.html'
-    success_url = reverse_lazy('home')

@@ -8,6 +8,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.shortcuts import redirect, render
+from django.views.generic import DetailView
+
 # from AdminPanel.forms import PostForm
 
 # Create your views here.
@@ -100,3 +102,8 @@ def categoryDelete(request, category_id):
     category = Category.objects.get(id=category_id)
     category.delete()
     return redirect('categ-page')
+
+class ArticleDetailView(DetailView):
+    model = Post
+    template_name = 'admin/article_details.html'
+
