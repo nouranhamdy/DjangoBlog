@@ -2,18 +2,18 @@
 {% block content %}
      
 
-<h1>Admin Panel</h1>
+<h1 style=" color:black">Admin Panel</h1>
 
-<ul>
-    <li >
-        <a  href="{% url 'Admin_posts' %}"> Manage Posts </a>
+<ul class="list-group">
+    <li class="list-group-item ">
+        <a  href="{% url 'Admin_posts' %}"> <span class="oi oi-align-center">Manage Posts </span> </a>
         
       </li>
-      <li>
+      <li class="list-group-item ">
         <a  href="{% url 'admin_users' %}"> Manage Users </a>
 
       </li>
-      <li>
+      <li class="list-group-item ">
         <a  href="{% url 'categ-page' %}"> Manage Categories </a>
 
       </li>
