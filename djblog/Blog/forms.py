@@ -10,61 +10,9 @@ from .models import user
 
 
 class RegisterForm(UserCreationForm):
-    # password2 = forms.CharField(
-    #     label="Confirm password",
-    #     widget=forms.PasswordInput(
-    #         attrs={'id': 'pass', 'type': 'password', 'placeholder': 'confirm password'}),
-    # )
-
-    # telephone = PhoneNumberField(
-    #     widget=forms.TextInput(attrs={'placeholder': 'Phone'}),
-    #     label="Phone number",
-    #     required=False,
-    #     #initial='EG',
-    # )
-
     class Meta:
         model = user
-        fields = ('username', 'email', 'first_name', 'last_name', 'telephone', 'password1', 'password2')
-        # fields = ('username', 'email', 'password')
-        # widgets = {
-        #     'username': forms.TextInput(attrs={'id': 'name', 'placeholder': 'your name'}),
-        #     'email': forms.EmailInput(attrs={'id': 'email', 'placeholder': 'email'}),
-        #     'password': forms.PasswordInput(attrs={'placeholder': 'password', 'type': 'password'}),
-        #     # 'telephone': PhoneNumberField(
-        #     #     widget=forms.TextInput(attrs={'placeholder': 'Phone'}),
-        #     #     label="Phone number",
-        #     #     required=False,
-        #     #     initial='EG',
-        #     # )
-        # }
-
-    # def clean(self):
-    #     cleaned_data = super(RegisterForm, self).clean()
-    #     username = cleaned_data.get("username")
-    #     email = cleaned_data.get("email")
-    #     password1 = cleaned_data.get("password")
-    #     # password2 = cleaned_data.get("password2")
-    #     # telephone = cleaned_data.get("telephone")
-    #
-    #     # validate username
-    #     user = User.objects.filter(username=username)
-    #     if user:
-    #         raise forms.ValidationError(
-    #             "That user is already taken , please select another ")
-    #     elif not re.search(r'^\w+$', username):
-    #         raise forms.ValidationError(
-    #             "Username can only contain alphanumeric characters and the underscore.")
-    #
-    #     # validate password
-    #     # if password1 != password2:
-    #     #     raise forms.ValidationError("Your current and confirm password do not match.")
-    #
-    #     #validate telephone number
-    #     # tel_pattern = r'^01[0-2,5]{1}[0-9]{8}$'
-    #     # if not re.match(tel_pattern, telephone):
-    #     #     raise forms.ValidationError("invalid telephone number")
-    #     return cleaned_data
+        fields = ('username', 'email', 'first_name', 'last_name','telephone', 'password1', 'password2')
 
 
 class LoginForm(forms.ModelForm):
@@ -78,6 +26,16 @@ class LoginForm(forms.ModelForm):
         self.fields['password'].widget.attrs.update({'id': 'pass', 'placeholder': 'password'})
 
 
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ('name',)
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Write your name here!'}),
+        }
+
+
+
 choices = Category.objects.all().values_list('name','name')
 choice_list= []
 for item in choices:
@@ -87,7 +45,7 @@ for item in choices:
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'title_tag', 'author','category', 'body')
+        fields = ('title', 'title_tag', 'author', 'picture', 'category', 'body')
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -109,3 +67,8 @@ class EditForm(forms.ModelForm):
             #'author': forms.Select(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('content', )

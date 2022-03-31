@@ -1,0 +1,24 @@
+{% extends 'admin/base.html' %}
+{% block content %}
+     
+
+<h1 style=" color:black">Admin Panel</h1>
+
+<ul class="list-group">
+    <li class="list-group-item ">
+        <a  href="{% url 'Admin_posts' %}"> <span class="oi oi-align-center">Manage Posts </span> </a>
+
+      </li>
+      <li class="list-group-item ">
+        <a  href="{% url 'admin_users' %}"> Manage Users </a>
+
+      </li>
+      <li class="list-group-item ">
+        <a  href="{% url 'categ-page' %}"> Manage Categories </a>
+
+      </li>
+</ul>
+
+
+{% endblock %}
+

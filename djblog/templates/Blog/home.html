@@ -1,27 +1,62 @@
-{% extends 'Blog/base.html' %}
-{% block content %}
-<h1>Posts</h1>
-<ul>
-
-        {% for post in posts %}
-        <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a>
-            - <a href="{% url 'category' post.category|slugify %}">{{post.category}}</a>
-            - <img src={{post.picture.url}}>
-            - {{post.author.first_name}}
-            {{post.author.last_name}}
-            - {{post.post_date}}
-            <small>
-                {% if user.is_authenticated %}
-                - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-                <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
-                {% endif%}
-            </small><br/>
-            {{post.body | slice:":200" | safe}}
-        </li>
-
-        {% endfor %}
-    {% include 'Blog/pagination.html' with page=posts %}
-</ul>
+{%  extends 'Blog/post_base.html' %}
 
 
-{% endblock %}
+
+{% block posts %}
+{% include 'Blog/header.html' %}
+	  <!-- hero section -->
+	   {% for post in posts %}
+<!--    <form method="post" enctype="multipart/form-data"> {% csrf_token %}-->
+	  <div class="container" id="hero">
+	  	<div class="row justify-content-end">
+
+			<div class="col-lg-6 hero-img-container">
+	  			<a href="{% url 'article-detail' post.pk %}">
+	  			<div class="hero-img">
+                    {% if post.picture %}
+                     <img src= {{post.picture.url}}>
+                    {% endif %}
+                </div>
+	  			</a>
+	  		</div>
+
+	  		<div class="col-lg-9">
+	  			<div class="hero-title">
+	  				<a href="{% url 'article-detail' post.pk %}">
+	  				<h1> {{post.title}}</h1>
+	  				</a>
+	  			</div>
+
+	  		</div>
+
+	  		<div class="col-lg-6">
+	  			<div class="hero-meta">
+					<p>{{post.body | slice:":50" | safe}}<br/><a href="{% url 'article-detail' post.pk %}">read more</a></p>
+	  				<div class="author">
+	  					<div class="author-meta">
+	  					<span class="author-name">{{post.author}} </span>
+                    <span class="date mt-2">{{post.post_date}}</span>
+	  				<div class="tags mt-2">
+							<a href=""><span class="badge badge-pill p-2 badge-light">#{{post.title_tag}}</span></a>
+	  				</div>
+	  					</div>
+
+	  				</div>
+					  <br>
+					    {% if user.is_superuser %}
+						<a href="{% url 'update_post' post.pk %}"><span class="badge badge-pill p-2 badge-light"> Edit </span></a>
+						<a href="{% url 'delete_post' post.pk %}"><span class="badge badge-pill p-2 badge-light"> Delete </span></a>
+                        {% endif%}
+	  			</div>
+	  		</div>
+
+	  	</div>
+	  </div>
+
+
+ {% endfor %}
+<!-- hero ends -->
+{% include 'Blog/pagination.html' with page=posts %}
+<br/>
+{% include 'Blog/footer.html' %}
+    {% endblock %}

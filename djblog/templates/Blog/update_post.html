@@ -1,16 +1,40 @@
-{% extends 'Blog/base.html' %}
+{% extends 'Blog/post_base.html' %}
 {% block title %}Edit Blog Post{%  endblock %}
-{% block content %}
+{% block update %}
 {% if user.is_authenticated %}
-<h1>Update Post...</h1>
-<br/><br/>
-<div class="form-group">
-    <form method="post"> {% csrf_token %}
-        {{form.as_p}}
+
+    <div class="container mt-5" id="content">
+<div class="hero-title" style=" text-align: center;" >
+
+	  				<h1>Update Post...</h1>
+
+	  			</div>
+        <br>
+    <form action="tag.get_update_url" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+
+
+		<div class="col-xl-7 col-lg-10 col-md-12">
+			<div  class="lead">
+        {{field.label}}
+        {{field}}
+                <br>
+       </div>
+					</div>
+ {% endfor %}
+
+
         <button class="btn btn-secondary">Update</button>
     </form>
-</div>
+    </div>
+
 {% else %}
 You are not allowed here!
 {%endif%}
+
+
+<!-- Content -->
+
+
 {% endblock %}

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Blog',
     'phonenumber_field',
+    'AdminPanel'
 ]
 
 MIDDLEWARE = [
@@ -119,6 +120,11 @@ USE_TZ = True
 
 STATIC_URL = os.path.join(BASE_DIR, 'Blog/static/')
 
+MEDIA_URL = '/media/'
+
+# Path where media is stored
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -127,3 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 PHONENUMBER_DB_FORMAT = 'NATIONAL'
 PHONENUMBER_DEFAULT_REGION = "EG"
+

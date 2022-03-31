@@ -26,14 +26,15 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100)
     #requires  "pip install Pillow"
-    picture = models.ImageField()
+    picture = models.ImageField(upload_to='images')
     body = models.CharField(max_length=1000)
     post_date = models.DateTimeField(auto_now_add=True)
     title_tag = models.CharField(max_length=255, default='')
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
-    author = models.CharField(max_length=255, default='')
+    author = models.ForeignKey(user, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    # likes = models.ManyToManyField (User, related_name='blog_posts')
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
@@ -46,7 +47,7 @@ class Post(models.Model):
 class Comment(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     content = models.CharField(max_length=1000)
-    user = models.CharField(max_length=255, default='')
+    user = models.ForeignKey(user, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
 

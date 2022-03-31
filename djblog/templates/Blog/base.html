@@ -11,10 +11,10 @@
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/coda-slider.css' %}">
 
     <!-- Main css -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -23,12 +23,15 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-{% include 'Blog/header.html' %}
-<div class="container">
+
+    {% block header %}
+
+    {% endblock %}
+
     {% block content %}
 
     {% endblock %}
-</div>
-{% include 'Blog/footer.html' %}
+
+
 </body>
 </html>

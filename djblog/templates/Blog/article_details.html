@@ -1,21 +1,130 @@
-{% extends 'Blog/base.html' %}
-{% block title %}{{post.title_tag}}{%  endblock %}
-{% block content %}
-<h1>{{post.title}}</h1>
-By: {{post.author.first_name}}
-{{post.author.last_name}} -
-{{post.post_date}}
-<small>
-  {% if user.is_authenticated %}
-  - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-  <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
-  {% endif %}
-</small></br>
-<hr>
-<br/>
-{{post.body |safe}}
+{% extends 'Blog/post_base.html' %}
 
-<br/><br/>
-<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+{% block title %}
+
+{{post.title_tag}}
+{%  endblock %}
+
+{% block details %}
+
+	  <div class="container" id="hero">
+	  	<div class="row justify-content-end">
+
+			<div class="col-lg-6 hero-img-container">
+	  			<a href="{% url 'article-detail' post.pk %}">
+	  			<div class="hero-img">
+                    {% if post.picture %}
+                     <img src= {{post.picture.url}}>
+                    {% endif %}
+                </div>
+	  			</a>
+	  		</div>
+
+	  		<div class="col-lg-9">
+	  			<div class="hero-title">
+	  				<a href="{% url 'article-detail' post.pk %}">
+	  				<h1> {{post.title}} </h1>
+	  				</a>
+	  			</div>
+
+	  		</div>
+
+	  		<div class="col-lg-6">
+	  			<div class="hero-meta">
+	  				<p>{{post.body | slice:":50" | safe}}</p>
+	  				<div class="author">
+	  					<div class="author-meta">
+	  					<span class="author-name">{{post.author}} </span>
+                    <span class="date mt-2">{{post.post_date}}</span>
+	  				<div class="tags mt-2">
+							<a href=""><span class="badge badge-pill p-2 badge-light">#{{post.title_tag}}</span></a>
+	  				</div>
+	  					</div>
+
+	  				</div>
+					  <br>
+					    {% if user.is_superuser %}
+						<a href="{% url 'update_post' post.pk %}"><span class="badge badge-pill p-2 badge-light"> Edit </span></a>
+						<a href="{% url 'delete_post' post.pk %}"><span class="badge badge-pill p-2 badge-light"> Delete </span></a>
+                        {% endif%}
+	  			</div>
+	  		</div>
+
+	  	</div>
+	  </div>
+
+<!-- Content -->
+
+<div class="container mt-5" id="content">
+
+	<div class="row justify-content-center">
+		<!-- Share buttons -->
+
+		<div class="col-lg-1 text-left mb-3 fixed" id="social-share">
+			<a class="btn  btn-light m-2" href="#"><i class="fab fa-facebook-f"></i></a>
+			<a class="btn  btn-light m-2" href="#"><i class="fab fa-google"></i></a>
+			<a class="btn  btn-light m-2" href="#"><i class="fab fa-twitter"></i></a>
+
+		</div>
+
+		<!-- the content -->
+		<div class="col-xl-7 col-lg-10 col-md-12">
+			<p class="lead"> {{post.body}}</p>
+					</div>
+		<!-- COMMENTS  -->
+			  			<div class="hero-title" style="width:1500px; align-content: center;">
+
+			<div class="col-xl-6 col-lg-10 col-md-12">
+		<br>
+				<div><h2>Leave your comment!</h2></div>
+
+<div id="comments_section">
+
+  {% if user.is_authenticated %}
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      {{ comment_form }}
+      <button class="btn btn-info" type="submit">Add comment <i class="fas fa-comments"></i></button>
+    </div>
+  </form>
+  {% else %}
+  <a class="btn btn-outline-info" href="{% url 'login' %}">Log in to add a comment!</a><br>
+  {% endif %}
+
+  {% if comments %}
+  <strong class="text-secondary">{{ object.number_of_comments }} Comment{{ object.number_of_comments|pluralize }}</strong>
+  <hr>
+  <ul>
+    {% for comment in comments %}
+    <li>
+     <div>
+        <span>
+          <strong class="text-info">{{ comment.user }} </strong>
+          <small class="text-muted">{{ comment.date }}</small>
+        </span>
+        <p>
+          {{ comment.content|safe }}
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <strong class="text-secondary">No comments yet...</strong>
+  {% endif %}
+</div>
+
+</div>
+			</div>
+
+
+	</div>
+</div>
+
+
+
+
+
   {% endblock %}
 

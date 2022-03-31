@@ -1,6 +1,8 @@
 {% extends 'Blog/base.html' %}
 {% load static %}
 {% block content %}
+<div class="main">
+<div class="container">
 <section class="sign-in">
 
         <div class="signin-content">
@@ -31,6 +33,7 @@
                     {% for msg in messages %}
                     <p style="color:red;" id="messages">{{ msg }}</p>
                     {% endfor %}
+
                 </form>
                 <div class="social-login">
                     <span class="social-label">Or login with</span>
@@ -45,4 +48,6 @@
       
     </div>
 </section>
+</div>
+</div>
 {% endblock %}
