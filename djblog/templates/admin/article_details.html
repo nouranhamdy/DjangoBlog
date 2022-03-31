@@ -1,0 +1,16 @@
+{% extends 'Blog/base.html' %}
+{% block title %}{{post.title_tag}}{%  endblock %}
+{% block content %}
+<h1>{{post.title}}</h1>
+By: {{post.author}}
+{{post.author.last_name}} -
+{{post.post_date}}
+
+<hr>
+<br/>
+{{post.body |safe}}
+
+<br/><br/>
+<a href="{% url 'Admin_posts' %}" class="btn btn-secondary">Back</a>
+  {% endblock %}
+

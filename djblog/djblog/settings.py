@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Blog',
     'phonenumber_field',
-    'AdminPanel'
+    'AdminPanel',
+    #'profanity',
 ]
 
 MIDDLEWARE = [

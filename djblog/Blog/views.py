@@ -17,6 +17,8 @@ from django.urls import reverse_lazy
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from .models import Post
 
+#pip install django-profanity-check
+
 
 
 # Create your views here.
@@ -27,9 +29,9 @@ from .models import Post
 
 
 def register(request):
-    # if request.user.is_authenticated:
-    #     return redirect('login')
-    # else:
+    if request.user.is_authenticated:
+        return redirect('login')
+    else:
         form = RegisterForm()
         if request.method == 'POST':
             form = RegisterForm(request.POST)
@@ -43,9 +45,9 @@ def register(request):
 
 
 def loginPg(request):
-    # if request.user.is_authenticated:
-    #     return redirect('home')
-    # else:
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
         if request.method == 'POST':
             name = request.POST.get('username')
             password = request.POST.get('password')

@@ -2,12 +2,14 @@
 
 
 
+
+
 {% block posts %}
 {% include 'Blog/header.html' %}
 	  <!-- hero section -->
 	   {% for post in posts %}
 <!--    <form method="post" enctype="multipart/form-data"> {% csrf_token %}-->
-	  <div class="container" id="hero">
+	  <div class="container" id="hero" style="margin-bottom:220px;">
 	  	<div class="row justify-content-end">
 
 			<div class="col-lg-6 hero-img-container">
@@ -31,6 +33,7 @@
 
 	  		<div class="col-lg-6">
 	  			<div class="hero-meta">
+
 					<p>{{post.body | slice:":50" | safe}}<br/><a href="{% url 'article-detail' post.pk %}">read more</a></p>
 	  				<div class="author">
 	  					<div class="author-meta">
