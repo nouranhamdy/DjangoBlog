@@ -10,3 +10,16 @@ validate-email==1.3
 django-phonenumber-field[phonenumbers]
 djangorestframework
 pymysql
+setuptools>=65.4.1
+metomi-isodatetime==1!2.0.2
+pymongo[srv]>=3.11.2, <4.0
+connexion[swagger-ui]>=2.7.0, <3.0
+Flask==2.2.5
+urllib3==1.26.5
+instana
+python_dateutil>=2.8.1, <3.0
+six==1.16.0
+requests
+gunicorn[gevent]>=20.0.4, <21.0
+pycountry>=20.7.3, <21.0
+urllib3>=1.26.5
